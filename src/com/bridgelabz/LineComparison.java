@@ -8,9 +8,23 @@ package com.bridgelabz;
  * @since : 24/09/2021
  */
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class LineComparison {
+    static void compareTo(Double lineLength1, Double lineLength2) {
+        if (lineLength1 > lineLength2) {
+            System.out.println(" line 1 is greater than line 2");
+
+        } else if (lineLength1 < lineLength2) {
+            System.out.println("line2 is greater than line1");
+
+        } else {
+            System.out.println(" both lines are equal");
+        }
+    }
+
+
     public static void main(String[] args) {
         System.out.println("Welcome to Line Comparison Computation program");
         Scanner sc = new Scanner(System.in);
@@ -45,11 +59,7 @@ public class LineComparison {
         System.out.println("The length of Line1 is" + lineLength1);
         System.out.println("The length of line2 is " + lineLength2);
 
-        if (lineLength1 == lineLength2) {
-            System.out.println("Two Lines are Equal");
-        } else {
-            System.out.println("Two Lines are Not Equal");
-        }
+        compareTo(lineLength1, lineLength2);
 
     }
 }
